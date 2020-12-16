@@ -1,0 +1,46 @@
+h1,
+p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 48px;
+  color: #ac3b61;
+  //color: #e27d60;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 300;
+}
+
+body {
+  background-color: #eee2dc;
+  //background-color: #85dcbb;
+}
+
+#root {
+  &.clicked {
+    h1 {
+      animation: right 4s infinite reverse;
+    }
+    p {
+      animation: right 4s infinite;
+    }
+    @keyframes right {
+      0% {
+        transform: rotate(0) translate(-50%, -50%);
+      }
+      100% {
+        transform: rotate(360deg) translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+//font 4 vastagság p legvékonyabb legvastagabb h1 48px magas
+//színpárosítás egy háttér egy szöveg
